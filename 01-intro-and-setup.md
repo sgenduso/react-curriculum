@@ -73,7 +73,7 @@ JSX enables you to write HTML-esque code straight into your JS.
 It is very similiar to other templating libraries.
 
 Let's take a look at `helloworld.jsx` again`:
-```
+```js
 
 React.render(
   <h1>Hello, world!</h1>,
