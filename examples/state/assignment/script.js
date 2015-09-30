@@ -20,9 +20,19 @@ var PresidentsList = React.createClass({
 });
 
 var AddPresident = React.createClass({
+  getInitialState: function(){
+    return {
+      typedVal: ""
+    }
+  },
+  getValue: function(e){
+    this.setState({
+      typedVal: e.target.value
+    })
+  }
   handleAddNewPresident: function(e){
     e.preventDefault();
-    this.props.addNew(e.target.childNodes[0].value)
+    this.props.addNew(this.state.typedVal)
     e.target.childNodes[0].value = ""
     e.target.childNodes[0].focus();
   },
@@ -30,7 +40,7 @@ var AddPresident = React.createClass({
     return (
     <div>
       <form onSubmit={this.handleAddNewPresident}>
-        <input type="text" autoFocus/>
+        <input type="text" onChange={this.getValue} value={this.state.typedVal} autoFocus/>
         <input  type="submit" value="Add a President"/>
       </form>
     </div>
