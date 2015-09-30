@@ -17,7 +17,7 @@ this method runs after the component is mounted
 
 Here is an example that will focus on the input of a component when mounted:
 
-```
+```js
     var App = React.createClass({
       getInitialState: function() {
         return {
@@ -48,7 +48,7 @@ Here is an example that will focus on the input of a component when mounted:
 this method runs before the component will unmount
 
 You can see these methods in action with this example:
-```
+```js
     var App = React.createClass({
       getInitialState: function(){
         return {

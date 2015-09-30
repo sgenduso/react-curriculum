@@ -12,7 +12,7 @@ While building applications there are many times we want to gain access to nodes
 
 Let's revisit our typing assignment and refactor to use refs!
 
-```
+```js
     var App = React.createClass({
       getInitialState: function(){
         return {
@@ -64,7 +64,7 @@ Since we're going to be building larger applications, let's build an example ste
 
 1. Create three components, Header, App and Form and render the App to the document.body
 
-    ```
+    ```js
       var App = React.createClass({
         render: function() {
           return (
@@ -96,7 +96,7 @@ Since we're going to be building larger applications, let's build an example ste
 
 2. The Header component should render an `<h1>` with the text of whatever its childrens props are (use `this.props.children`)
 
-    ```
+    ```js
       var Header = React.createClass({
         render: function() {
           return (
@@ -107,7 +107,7 @@ Since we're going to be building larger applications, let's build an example ste
     ```
 
     2. Our App Component should have an initialState with the keys and values of: 
-      ```
+      ```js
       {
         val: "",
         checkboxVal: false,
@@ -117,7 +117,7 @@ Since we're going to be building larger applications, let's build an example ste
 
     Answer: 
 
-    ```
+    ```js
       var App = React.createClass({
         getInitialState: function(){
           return {
@@ -137,7 +137,7 @@ Since we're going to be building larger applications, let's build an example ste
 
 3. Our app should have a method called `update` that takes in three parameters (text, checkboxVal and radioVal) and sets the state to be equal to the three parameters).
 
-    ```
+    ```js
      var App = React.createClass({
       getInitialState: function(){
         return {
@@ -166,7 +166,7 @@ Since we're going to be building larger applications, let's build an example ste
   - One that has the text "Checkbox:" and then whatever the state of checkboxVal is.
   - One that has the text "Radio:" and then whatever the state of radioVal is.
 
-    ```
+    ```js
       var App = React.createClass({
         getInitialState: function(){
           return {
@@ -200,7 +200,7 @@ Since we're going to be building larger applications, let's build an example ste
 
 4. In our `render` method for our App component, after the `</ul>`, let's add the Form component and give it a prop of onCustomSubmit with a value of the result of the update method we defined above.
 
-    ```
+    ```js
       var App = React.createClass({
         getInitialState: function(){
           return {
@@ -235,7 +235,7 @@ Since we're going to be building larger applications, let's build an example ste
 
 5. Let's move onto our `Form` component. Our Form component should render a `<div>` with a `<form>` inside. The form should have an onSubmit event that runs a method called captureValue. This means we will also have to define a method called captureValue. 
 
-    ```
+    ```js
       var Form = React.createClass({
         captureValue: function(){
 
@@ -258,7 +258,7 @@ Since we're going to be building larger applications, let's build an example ste
   - A radio button with a ref of "radio"
   - An input with a type of submit and a value of "change things!"
 
-    ```
+    ```js
       var Form = React.createClass({
         captureValue: function(){
         },
@@ -284,7 +284,7 @@ Since we're going to be building larger applications, let's build an example ste
 
 Finally, let's call our onCustomSubmit method (that was passed to us as props from the App component) and pass in `inputText`, `checkboxValue` and `radioValue`.
 
-    ```
+    ```js
       var Form = React.createClass({
         captureValue: function(e){
           e.preventDefault();
@@ -310,7 +310,7 @@ Finally, let's call our onCustomSubmit method (that was passed to us as props fr
 
 8. We should now see our text changing when we submit the form depending on what we have checked! It would be really cool if we could change the header depending on whether the box is checked. Lets write two methods in our App component, one called renderMeanHeader and renderNiceHeader and then inside our render method, if the checkbox is checked `return` the `renderNiceHeader` otherwise return the `renderMeanHeader`
 
-    ```
+    ```js
       var App = React.createClass({
         getInitialState: function(){
           return {
@@ -366,7 +366,7 @@ Finally, let's call our onCustomSubmit method (that was passed to us as props fr
 
 9. Your script.js should look like this now.
 
-    ```
+    ```js
       var App = React.createClass({
         getInitialState: function(){
           return {

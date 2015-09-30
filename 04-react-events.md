@@ -12,7 +12,7 @@ Just like in our previous JavaScript applications, we manipulated the DOM by lis
 
 Let's start by creating a component called Button which will render a button with the text "Click Me" (try to do this using props). Try this first before you look at the solution!
 
-```
+```js
     var Button = React.createClass({
       render: function() {
         return (
@@ -26,7 +26,7 @@ Let's start by creating a component called Button which will render a button wit
 
 Now that we have a button, let's add a function to be run when a click event occurs, we will call this function sayHi and then attach it to the button.
 
-```
+```js
     var Button = React.createClass({
       sayHi: function(){
         alert("hi!")
@@ -45,7 +45,7 @@ Notice that we are using the keyword `this` to refer to our component which has 
 
 Now let's write a method that tries to change the props of the component when the button is clicked. Something like this:
 
-```
+```js
     var Button = React.createClass({
       changeText: function(){
         this.props.text = "BOOM!"

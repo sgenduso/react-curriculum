@@ -58,7 +58,7 @@ React is a powerful tool for only a couple reasons:
 
 `helloworld.jsx`:
 
-```
+```js
 React.render(
   <h1>Hello, world!</h1>,
   document.getElementById('hello')
@@ -85,7 +85,7 @@ That looks like HTML! Not JS!
 
 JSX is optional and React can actually be written in JS:
 
-```
+```js
 React.render(
   React.createElement('h1', null, 'Hello, world!'),
   document.getElementById('example')
@@ -142,7 +142,7 @@ Staying true to an iterative approach to coding, we'll start slow, defining ever
 
 `index.html`
 
-``` 
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -160,7 +160,7 @@ Staying true to an iterative approach to coding, we'll start slow, defining ever
 
 `helloworld.js`
 
-``` 
+```js
 var HelloWorld = React.createClass({
   render: function(){
     return <h1>Hello World!</h1>

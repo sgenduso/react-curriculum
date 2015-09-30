@@ -14,7 +14,7 @@ So far, our React components have been quite simple and have no customization. T
 
 Let's build a simple component to say Hello, but instead of world, let's change the component to reference our name!
 
-```
+```js
     var HelloName = React.createClass({
       render : function() {
         return (
@@ -34,7 +34,7 @@ Say we want to create a component called AnswerToEverything, which has a prop th
 
 Solution:
 
-```
+```js
     var AnswerToEverything = React.createClass({
       propTypes: {
         number: React.PropTypes.number.isRequired
@@ -59,7 +59,7 @@ So far all of our applications have had just one component, but as we have seen 
 
 This is what it looks like:
 
-```
+```js
 var books = ["Cat's Cradle", "Grapes of Wrath", "Infinite Jest"]
 
 var Book = React.createClass({
@@ -100,7 +100,7 @@ Hint: We are using `map` to iterate over our array. The callback function to map
 
 Solution:
 
-```
+```js
   var BookList = React.createClass({
     books: books.map(function(book,index){
       return (
@@ -131,7 +131,7 @@ According to the React docs:
 
 A parent component can access its child components using `this.props.children`. We will see this more when we discuss larger applications and refs, but you can read more [here](https://facebook.github.io/react/tips/children-props-type.html). Here is an example with this.props.children
 
-```
+```js
   var App = React.createClass({
     render: function() {
       return (
@@ -145,7 +145,7 @@ A parent component can access its child components using `this.props.children`. 
 
 Here is another example:
 
-```
+```js
   var Parent = React.createClass({
     render: function(){
       return (
