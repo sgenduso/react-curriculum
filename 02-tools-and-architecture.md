@@ -20,7 +20,7 @@ Another very useful Chrome extention is react-detector, which will show you webi
 
 ### Using Bower as a replacement for the CDN
 
-If you want to start using Bower instead of a CDN, learn some more about it [here](../bower) and then run `bower init` and then `bower install react --save`. Make sure to add `bower_components` to your `.gitignore`.
+If you want to start using Bower instead of a CDN, learn some more about it [here](./bower) and then run `bower init` and then `bower install react --save`. Make sure to add `bower_components` to your `.gitignore`.
 
 ## Questions
  
