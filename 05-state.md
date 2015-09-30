@@ -139,7 +139,7 @@ var Child = React.createClass({
 React.render(<Parent/>, document.body)
 ```
 
-Take a look at this example in the console and what do you see? The child's props are the same as the parent's state! How cool is that? This means that we can use the parent's state to manage any changes to the props of its children. We pass props to children through state and manipulate it by using the `setState` method. 
+Take a look at this example in the console and what do you see? The child's props are the same as the parent's state! How cool is that? This means that we can use the parent's state to manage any changes to the props of its children. We pass props to children through state and manipulate it by using the `setState` method.
 
 ## Questions
 
@@ -152,6 +152,9 @@ Take a look at this example in the console and what do you see? The child's prop
 
 * Read [this](https://medium.com/react-tutorials/react-state-14a6d4f736f5) Tutorial
 * Presidents Challenge
+  - FINISH THIS
   - Create Three components, PresidentList, AddPresident and President. 
-  - FINISH THIS! 
+    + PresidentList should render a div with the AddPresident component and President Component 
+    + AddPresident should render a div with a form. Inside the form there should be an text input and a button/input to submit the form. 
+    + When the form is submitted, you should capture the value of what the user typed in an add it to the presidents array.
   - Include hints about e.target / concat instead of push 

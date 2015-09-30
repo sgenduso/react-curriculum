@@ -33,7 +33,9 @@ var AddPresident = React.createClass({
   handleAddNewPresident: function(e){
     e.preventDefault();
     this.props.addNew(this.state.typedVal)
-    e.target.childNodes[0].value = ""
+    this.setState({
+      typedVal: ""
+    })
     e.target.childNodes[0].focus();
   },
   render: function(){
