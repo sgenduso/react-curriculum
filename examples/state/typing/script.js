@@ -13,8 +13,6 @@ var App = React.createClass({
     this.setState({
       text: ""
     })
-    // This works if we are not using refs...
-    e.target.previousSibling.value = "";
     e.target.previousSibling.focus();
   },
   render: function() {
@@ -22,7 +20,7 @@ var App = React.createClass({
       <div>
         <h1>{this.props.children}</h1>
         <h1>{this.state.text}</h1>
-        <input id="typing" type="text" onKeyUp={this.changeText} autoFocus/>
+        <input type="text" value={this.state.text} onChange={this.changeText} autoFocus/>
         <button onClick={this.clearText}>Clear Text</button>
 
       </div>

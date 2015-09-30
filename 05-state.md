@@ -45,37 +45,36 @@ You can read a great answer [here](https://github.com/uberVU/react-guide/blob/ma
 
 ```js
     var App = React.createClass({
-      getInitialState: function(){
-        return {
-          text: ""
-        }
-      },
-      changeText: function(e){
-        this.setState({
-          text: e.target.value
-        })
-      },
-      clearText: function(e){
-        this.setState({
-          text: ""
-        })
-        e.target.previousSibling.value = "";
-        e.target.previousSibling.focus();
-      },
-      render: function() {
-        return (
-          <div>
-            <h1>{this.props.children}</h1>
-            <h1>{this.state.text}</h1>
-            <input id="typing" type="text" onKeyUp={this.changeText} autoFocus/>
-            <button onClick={this.clearText}>Clear Text</button>
+  getInitialState: function(){
+    return {
+      text: ""
+    }
+  },
+  changeText: function(e){
+    this.setState({
+      text: e.target.value
+    })
+  },
+  clearText: function(e){
+    this.setState({
+      text: ""
+    })
+    e.target.previousSibling.focus();
+  },
+  render: function() {
+    return (
+      <div>
+        <h1>{this.props.children}</h1>
+        <h1>{this.state.text}</h1>
+        <input type="text" value={this.state.text} onChange={this.changeText} autoFocus/>
+        <button onClick={this.clearText}>Clear Text</button>
 
-          </div>
-        );
-      }
-    });
+      </div>
+    );
+  }
+});
 
-    React.render(<App>Type in here!</App>, document.body)
+React.render(<App>Type in here!</App>, document.body)
 ```
 
 ## Using state to toggle information based on a checkbox 
