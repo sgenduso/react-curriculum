@@ -8,7 +8,7 @@
 
 ## Introduction
 
-Up until now, we have used react to display information staticly (there has been no dynamic updating of the DOM). In order to make our app dynamic, we need to introduce a way to re-render the DOM. Our tool to do that is state. - When a component state data changes, the render function will be called again to re-render the change in state. Let's see this in an example using `this.state` 
+Up until now, we have used react to display information staticly (there has been no dynamic updating of the DOM). In order to make our app dynamic, we need to introduce a way to re-render the DOM. Our tool to do that is state. When a component's state data changes, the render function will be called again to re-render the change in state. Let's see this in an example using `this.state`.
 
 ## How is it different than props?
 
@@ -82,34 +82,23 @@ You can read a great answer [here](https://github.com/uberVU/react-guide/blob/ma
 
 ```
     var Checkbox = React.createClass({
-        getInitialState: function(){
-          return {
-            isChecked: false
-          }
-        },
-        toggleChecked: function(e){
-          this.setState({
-            isChecked: e.target.checked ? "yes" : "no"
-          })
-        },
-        render: function(){
-
-            if(!this.state.isChecked){
-            return (
-              <div>
-                <h1>Is it checked? {this.state.isChecked} NAHHH</h1>
-                <input type="checkbox" onChange={this.toggleChecked}/>
-              </div>
-              )
-            }
-            else {
-              return (
-                <div>
-                  <h1>Is it checked? {this.state.isChecked} WOOHOO!</h1>
-                  <input type="checkbox" onChange={this.toggleChecked}/>
-                </div>
-                )
-            }
+      getInitialState: function(){
+        return {
+          isChecked: false
+        }
+      },
+      toggleChecked: function(e){
+        this.setState({
+          isChecked: e.target.checked
+        })
+      },
+      render: function(){
+        return (
+          <div>
+            <h1>Is it checked? {this.state.isChecked ? "WOOHOO!" : "NAHHH"}</h1>
+            <input type="checkbox" onChange={this.toggleChecked}/>
+          </div>
+        )
       }
     })
 

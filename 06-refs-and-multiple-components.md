@@ -8,7 +8,7 @@
 
 ## Introduction
 
-While building applications there are many times we want to gain access to nodes inside of our components. While we can sometimes use built in JavaScript DOM traversal methods (nextSibling, previousSibling etc.), those methods are quite clunky and do not make use of anything with React! So how do we do this? `refs` to the rescue! Refs can be values or even callbacks, you can read more about them [here](https://facebook.github.io/react/docs/more-about-refs.html)
+While building applications there are many times we want to gain access to nodes inside of our components. While we can sometimes use built in JavaScript DOM traversal methods (nextSibling, previousSibling etc.), those methods are quite clunky and do not make use of anything with React! So how do we do this? `refs` to the rescue! Refs can be values or even callbacks, you can read more about them [here](https://facebook.github.io/react/docs/more-about-refs.html).
 
 Let's revisit our typing assignment and refactor to use refs!
 
@@ -48,11 +48,11 @@ Let's revisit our typing assignment and refactor to use refs!
     React.render(<App>Type in here!</App>, document.body)
 ```
 
-Notice what we have done here. Our input now has a `ref=textInput` and we are using a method called React.findDOMNode and passing in `this.refs` and the name of our ref to access the underlying node.
+Notice what we have done here. Our input now has a `ref="textInput"` and we are using a method called React.findDOMNode and passing in `this.refs` and the name of our ref to access the underlying node.
 
 ### Quick Note
 
-In your exploration of React you may see a method called getDOMNode. This method is **Deprecated**. You can read more about .findDOMNode [here](https://facebook.github.io/react/docs/component-api.html)
+In your exploration of React you may see a method called getDOMNode. This method is **Deprecated**. You can read more about .findDOMNode [here](https://facebook.github.io/react/docs/component-api.html).
 
 ### Summary from the React Docs
 
@@ -64,190 +64,193 @@ Since we're going to be building larger applications, let's build an example ste
 
 1. Create three components, Header, App and Form and render the App to the document.body
 
-```
-  var App = React.createClass({
-    render: function() {
-      return (
-        
-        )
-    }
-  });
+    ```
+      var App = React.createClass({
+        render: function() {
+          return (
+            
+            )
+        }
+      });
 
-  var Header = React.createClass({
-    render: function() {
-      return (
-        <h1> </h1>
-      );
-    }
-  });
+      var Header = React.createClass({
+        render: function() {
+          return (
+            <h1> </h1>
+          );
+        }
+      });
 
-  var Form = React.createClass({
-    render: function() {
-      return (
-        <div>
-        
-        </div>
-      );
-    }
-  });
+      var Form = React.createClass({
+        render: function() {
+          return (
+            <div>
+            
+            </div>
+          );
+        }
+      });
 
-  React.render(<App/>,document.body)
-```
+      React.render(<App/>,document.body)
+    ```
 
-2. The Header component should render an <h1> with the text of whatever its childrens props are (use `this.props.children`)
+2. The Header component should render an `<h1>` with the text of whatever its childrens props are (use `this.props.children`)
 
-```
-  var Header = React.createClass({
-    render: function() {
-      return (
-        <h1>{this.props.children}</h1>
-      );
-    }
-  });
-```
+    ```
+      var Header = React.createClass({
+        render: function() {
+          return (
+            <h1>{this.props.children}</h1>
+          );
+        }
+      });
+    ```
 
-2. Our App Component should have an initialState with the keys and values of: 
-  ```
-  {
-    val: "",
-    checkboxVal: false,
-    radioVal: false
-  }
-  ```
-
-Answer: 
-
-```
-  var App = React.createClass({
-    getInitialState: function(){
-      return {
+    2. Our App Component should have an initialState with the keys and values of: 
+      ```
+      {
         val: "",
         checkboxVal: false,
         radioVal: false
       }
-    },
-    render: function() {
-     return (
-        <h1>Some things will go here....</h1>
-      )
-    }
-```
+      ```
+
+    Answer: 
+
+    ```
+      var App = React.createClass({
+        getInitialState: function(){
+          return {
+            val: "",
+            checkboxVal: false,
+            radioVal: false
+          }
+        },
+        render: function() {
+         return (
+            <h1>Some things will go here....</h1>
+          )
+        }
+      });  
+    ```
 
 
 3. Our app should have a method called `update` that takes in three parameters (text, checkboxVal and radioVal) and sets the state to be equal to the three parameters).
 
-```
- var App = React.createClass({
-   getInitialState: function(){
-     return {
-       val: "",
-       checkboxVal: false,
-       radioVal: false
-     }
-   },
-   update: function(text,checkboxVal,radioVal){
-     this.setState({
-       val: text,
-       checkboxVal: checkboxVal,
-       radioVal: radioVal
-     })
-   },
-   render: function() {
-    return (
-       <h1>Some things will go here....</h1>
-     )
-   }
-```
+    ```
+     var App = React.createClass({
+      getInitialState: function(){
+        return {
+          val: "",
+          checkboxVal: false,
+          radioVal: false
+        }
+      },
+      update: function(text,checkboxVal,radioVal){
+        this.setState({
+          val: text,
+          checkboxVal: checkboxVal,
+          radioVal: radioVal
+        })
+      },
+      render: function() {
+        return (
+          <h1>Some things will go here....</h1>
+        )
+      }
+    }); 
+    ```
 
 3. Your App component should render the Header with the text "Yeah!" as well an `<h1>` with the text "Form Values" and then a `<ul>` with the following `<li>`s
   - One that has the text "Input:" and then whatever the state of val is.
   - One that has the text "Checkbox:" and then whatever the state of checkboxVal is.
   - One that has the text "Radio:" and then whatever the state of radioVal is.
 
-```
-  var App = React.createClass({
-    getInitialState: function(){
-      return {
-        val: "",
-        checkboxVal: false,
-        radioVal: false
-      }
-    },
-    update: function(text,checkboxVal,radioVal){
-      this.setState({
-        val: text,
-        checkboxVal: checkboxVal,
-        radioVal: radioVal
-      })
-    },
-    render: function() {
-    return (
-      <div>
-        <Header>Yeah!</Header>
-        <h1>Form Values</h1>
-        <ul>
-          <li>Input: {this.state.val}</li>
-          <li>Checkbox: {this.state.checkboxVal.toString()}</li>
-          <li>Radio: {this.state.radioVal.toString()}</li>
-        </ul>
-      </div>
-    )
-    }
- 
-```
+    ```
+      var App = React.createClass({
+        getInitialState: function(){
+          return {
+            val: "",
+            checkboxVal: false,
+            radioVal: false
+          }
+        },
+        update: function(text,checkboxVal,radioVal){
+          this.setState({
+            val: text,
+            checkboxVal: checkboxVal,
+            radioVal: radioVal
+          })
+        },
+        render: function() {
+          return (
+            <div>
+              <Header>Yeah!</Header>
+              <h1>Form Values</h1>
+              <ul>
+                <li>Input: {this.state.val}</li>
+                <li>Checkbox: {this.state.checkboxVal.toString()}</li>
+                <li>Radio: {this.state.radioVal.toString()}</li>
+              </ul>
+            </div>
+          )
+        }
+      });
+    ```
 
 4. In our `render` method for our App component, after the `</ul>`, let's add the Form component and give it a prop of onCustomSubmit with a value of the result of the update method we defined above.
 
-```
-  var App = React.createClass({
-    getInitialState: function(){
-      return {
-        val: "",
-        checkboxVal: false,
-        radioVal: false
-      }
-    },
-    update: function(text,checkboxVal,radioVal){
-      this.setState({
-        val: text,
-        checkboxVal: checkboxVal,
-        radioVal: radioVal
-      })
-    },
-    render: function() {
-    return (
-      <div>
-        <Header>Yeah!</Header>
-        <h1>Form Values</h1>
-        <ul>
-          <li>Input: {this.state.val}</li>
-          <li>Checkbox: {this.state.checkboxVal.toString()}</li>
-          <li>Radio: {this.state.radioVal.toString()}</li>
-        </ul>
-        <Form onCustomSubmit={this.update}/>
-      </div>
-    )
-    }
-```
+    ```
+      var App = React.createClass({
+        getInitialState: function(){
+          return {
+            val: "",
+            checkboxVal: false,
+            radioVal: false
+          }
+        },
+        update: function(text,checkboxVal,radioVal){
+          this.setState({
+            val: text,
+            checkboxVal: checkboxVal,
+            radioVal: radioVal
+          })
+        },
+        render: function() {
+          return (
+            <div>
+              <Header>Yeah!</Header>
+              <h1>Form Values</h1>
+              <ul>
+                <li>Input: {this.state.val}</li>
+                <li>Checkbox: {this.state.checkboxVal.toString()}</li>
+                <li>Radio: {this.state.radioVal.toString()}</li>
+              </ul>
+              <Form onCustomSubmit={this.update}/>
+            </div>
+          )
+        }
+      });
+    ```
 
 5. Let's move onto our `Form` component. Our Form component should render a `<div>` with a `<form>` inside. The form should have an onSubmit event that runs a method called captureValue. This means we will also have to define a method called captureValue. 
 
-```
-  var Form = React.createClass({
-    captureValue: function(){
+    ```
+      var Form = React.createClass({
+        captureValue: function(){
 
-    },
-    render: function() {
-      return (
-        <div>
-          <form onSubmit={this.captureValue}>
-            
-          </form>
-        </div>
-      );
-    }
-  });
-```
+        },
+        render: function() {
+          return (
+            <div>
+              <form onSubmit={this.captureValue}>
+                
+              </form>
+            </div>
+          );
+        }
+      });
+    ```
 
 6. Inside our form, let's add four inputs
   - A text input with a ref of "text"
@@ -255,24 +258,24 @@ Answer:
   - A radio button with a ref of "radio"
   - An input with a type of submit and a value of "change things!"
 
-```
-  var Form = React.createClass({
-    captureValue: function(){
-    },
-    render: function() {
-      return (
-        <div>
-          <form onSubmit={this.captureValue}>
-            <input type="text" ref="text"/>
-            <input type="checkbox" ref="checkbox" />
-            <input type="radio" ref="radio" />
-            <input type="submit" value="Change things!" />
-          </form>
-        </div>
-      );
-    }
-  });
-```
+    ```
+      var Form = React.createClass({
+        captureValue: function(){
+        },
+        render: function() {
+          return (
+            <div>
+              <form onSubmit={this.captureValue}>
+                <input type="text" ref="text"/>
+                <input type="checkbox" ref="checkbox" />
+                <input type="radio" ref="radio" />
+                <input type="submit" value="Change things!" />
+              </form>
+            </div>
+          );
+        }
+      });
+    ```
 
 7. Our captureValue method should first prevent the default, and then let's define a few variables, `inputText`, `checkboxValue` and `radioValue`.
   - `inputText` is equal to the value of the text input (use React.findDOMNode) and (this.refs.text) to access this element
@@ -281,173 +284,173 @@ Answer:
 
 Finally, let's call our onCustomSubmit method (that was passed to us as props from the App component) and pass in `inputText`, `checkboxValue` and `radioValue`.
 
-```
-  var Form = React.createClass({
-    captureValue: function(e){
-      e.preventDefault();
-      var inputText = React.findDOMNode(this.refs.text).value
-      var checkboxValue = React.findDOMNode(this.refs.checkbox).checked
-      var radioValue = React.findDOMNode(this.refs.radio).checked
-      this.props.onCustomSubmit(inputText,checkboxValue,radioValue)
-    },
-    render: function() {
-      return (
-        <div>
-          <form onSubmit={this.captureValue}>
-            <input type="text" ref="text"/>
-            <input type="checkbox" ref="checkbox" />
-            <input type="radio" ref="radio" />
-            <input type="submit" value="Change things!" />
-          </form>
-        </div>
-      );
-    }
-  });
-```
+    ```
+      var Form = React.createClass({
+        captureValue: function(e){
+          e.preventDefault();
+          var inputText = React.findDOMNode(this.refs.text).value
+          var checkboxValue = React.findDOMNode(this.refs.checkbox).checked
+          var radioValue = React.findDOMNode(this.refs.radio).checked
+          this.props.onCustomSubmit(inputText,checkboxValue,radioValue)
+        },
+        render: function() {
+          return (
+            <div>
+              <form onSubmit={this.captureValue}>
+                <input type="text" ref="text"/>
+                <input type="checkbox" ref="checkbox" />
+                <input type="radio" ref="radio" />
+                <input type="submit" value="Change things!" />
+              </form>
+            </div>
+          );
+        }
+      });
+    ```
 
 8. We should now see our text changing when we submit the form depending on what we have checked! It would be really cool if we could change the header depending on whether the box is checked. Lets write two methods in our App component, one called renderMeanHeader and renderNiceHeader and then inside our render method, if the checkbox is checked `return` the `renderNiceHeader` otherwise return the `renderMeanHeader`
 
-```
-  var App = React.createClass({
-    getInitialState: function(){
-      return {
-        val: "",
-        checkboxVal: false,
-        radioVal: false
-      }
-    },
-    update: function(text,checkboxVal,radioVal){
-      this.setState({
-        val: text,
-        checkboxVal: checkboxVal,
-        radioVal: radioVal
-      })
-    },
-    renderNiceHeader: function(){
-      return (
-        <div>
-          <Header>Yeah!</Header>
-          <h1>Form Values</h1>
-          <ul>
-            <li>Input: {this.state.val}</li>
-            <li>Checkbox: {this.state.checkboxVal.toString()}</li>
-            <li>Radio: {this.state.radioVal.toString()}</li>
-          </ul>
-          <Form onCustomSubmit={this.update}/>
-        </div>
-        )
-    },
-    renderMeanHeader: function(){
-      return (
-        <div>
-          <Header>Boo!</Header>
-          <h1>Form Values</h1>
-          <ul>
-            <li>Input: {this.state.val}</li>
-            <li>Checkbox: {this.state.checkboxVal}</li>
-            <li>Radio: {this.state.radioVal}</li>
-          </ul>
-          <Form onCustomSubmit={this.update}/>
-        </div>
-        )
-    },
-    render: function() {
-      if(this.state.checkboxVal){
-        return this.renderNiceHeader()
-      } else {
-        return this.renderMeanHeader()
-      }
-    }
-  });
-```
+    ```
+      var App = React.createClass({
+        getInitialState: function(){
+          return {
+            val: "",
+            checkboxVal: false,
+            radioVal: false
+          }
+        },
+        update: function(text,checkboxVal,radioVal){
+          this.setState({
+            val: text,
+            checkboxVal: checkboxVal,
+            radioVal: radioVal
+          })
+        },
+        renderNiceHeader: function(){
+          return (
+            <div>
+              <Header>Yeah!</Header>
+              <h1>Form Values</h1>
+              <ul>
+                <li>Input: {this.state.val}</li>
+                <li>Checkbox: {this.state.checkboxVal.toString()}</li>
+                <li>Radio: {this.state.radioVal.toString()}</li>
+              </ul>
+              <Form onCustomSubmit={this.update}/>
+            </div>
+            )
+        },
+        renderMeanHeader: function(){
+          return (
+            <div>
+              <Header>Boo!</Header>
+              <h1>Form Values</h1>
+              <ul>
+                <li>Input: {this.state.val}</li>
+                <li>Checkbox: {this.state.checkboxVal}</li>
+                <li>Radio: {this.state.radioVal}</li>
+              </ul>
+              <Form onCustomSubmit={this.update}/>
+            </div>
+            )
+        },
+        render: function() {
+          if(this.state.checkboxVal){
+            return this.renderNiceHeader()
+          } else {
+            return this.renderMeanHeader()
+          }
+        }
+      });
+    ```
 
 9. Your script.js should look like this now.
 
-```
-  var App = React.createClass({
-    getInitialState: function(){
-      return {
-        val: "",
-        checkboxVal: false,
-        radioVal: false
-      }
-    },
-    update: function(text,checkboxVal,radioVal){
-      this.setState({
-        val: text,
-        checkboxVal: checkboxVal,
-        radioVal: radioVal
-      })
-    },
-    renderNiceHeader: function(){
-      return (
-        <div>
-          <Header>Yeah!</Header>
-          <h1>Form Values</h1>
-          <ul>
-            <li>Input: {this.state.val}</li>
-            <li>Checkbox: {this.state.checkboxVal.toString()}</li>
-            <li>Radio: {this.state.radioVal.toString()}</li>
-          </ul>
-          <Form onCustomSubmit={this.update}/>
-        </div>
-        )
-    },
-    renderMeanHeader: function(){
-      return (
-        <div>
-          <Header>Boo!</Header>
-          <h1>Form Values</h1>
-          <ul>
-            <li>Input: {this.state.val}</li>
-            <li>Checkbox: {this.state.checkboxVal}</li>
-            <li>Radio: {this.state.radioVal}</li>
-          </ul>
-          <Form onCustomSubmit={this.update}/>
-        </div>
-        )
-    },
-    render: function() {
-      if(this.state.checkboxVal){
-        return this.renderNiceHeader()
-      } else {
-        return this.renderMeanHeader()
-      }
-    }
-  });
+    ```
+      var App = React.createClass({
+        getInitialState: function(){
+          return {
+            val: "",
+            checkboxVal: false,
+            radioVal: false
+          }
+        },
+        update: function(text,checkboxVal,radioVal){
+          this.setState({
+            val: text,
+            checkboxVal: checkboxVal,
+            radioVal: radioVal
+          })
+        },
+        renderNiceHeader: function(){
+          return (
+            <div>
+              <Header>Yeah!</Header>
+              <h1>Form Values</h1>
+              <ul>
+                <li>Input: {this.state.val}</li>
+                <li>Checkbox: {this.state.checkboxVal.toString()}</li>
+                <li>Radio: {this.state.radioVal.toString()}</li>
+              </ul>
+              <Form onCustomSubmit={this.update}/>
+            </div>
+            )
+        },
+        renderMeanHeader: function(){
+          return (
+            <div>
+              <Header>Boo!</Header>
+              <h1>Form Values</h1>
+              <ul>
+                <li>Input: {this.state.val}</li>
+                <li>Checkbox: {this.state.checkboxVal}</li>
+                <li>Radio: {this.state.radioVal}</li>
+              </ul>
+              <Form onCustomSubmit={this.update}/>
+            </div>
+            )
+        },
+        render: function() {
+          if(this.state.checkboxVal){
+            return this.renderNiceHeader()
+          } else {
+            return this.renderMeanHeader()
+          }
+        }
+      });
 
-  var Header = React.createClass({
-    render: function() {
-      return (
-        <h1>{this.props.children}</h1>
-      );
-    }
-  });
+      var Header = React.createClass({
+        render: function() {
+          return (
+            <h1>{this.props.children}</h1>
+          );
+        }
+      });
 
-  var Form = React.createClass({
-    captureValue: function(e){
-      e.preventDefault();
-      var inputText = React.findDOMNode(this.refs.text).value
-      var checkboxValue = React.findDOMNode(this.refs.checkbox).checked
-      var radioValue = React.findDOMNode(this.refs.radio).checked
-      this.props.onCustomSubmit(inputText,checkboxValue,radioValue)
-    },
-    render: function() {
-      return (
-        <div>
-          <form onSubmit={this.captureValue}>
-            <input type="text" ref="text"/>
-            <input type="checkbox" ref="checkbox" />
-            <input type="radio" ref="radio" />
-            <input type="submit" value="Change things!" />
-          </form>
-        </div>
-      );
-    }
-  });
+      var Form = React.createClass({
+        captureValue: function(e){
+          e.preventDefault();
+          var inputText = React.findDOMNode(this.refs.text).value
+          var checkboxValue = React.findDOMNode(this.refs.checkbox).checked
+          var radioValue = React.findDOMNode(this.refs.radio).checked
+          this.props.onCustomSubmit(inputText,checkboxValue,radioValue)
+        },
+        render: function() {
+          return (
+            <div>
+              <form onSubmit={this.captureValue}>
+                <input type="text" ref="text"/>
+                <input type="checkbox" ref="checkbox" />
+                <input type="radio" ref="radio" />
+                <input type="submit" value="Change things!" />
+              </form>
+            </div>
+          );
+        }
+      });
 
-  React.render(<App/>,document.body)
-```
+      React.render(<App/>,document.body)
+    ```
 
 ## Bonuses
 
