@@ -16,7 +16,7 @@ You can read a great answer [here](https://github.com/uberVU/react-guide/blob/ma
 
 ## Using state to count clicks
 
-```
+```js
     var App = React.createClass({
       getInitialState: function(){
         return {
@@ -43,7 +43,7 @@ You can read a great answer [here](https://github.com/uberVU/react-guide/blob/ma
 
 ## Using state to display typing
 
-```
+```js
     var App = React.createClass({
       getInitialState: function(){
         return {
@@ -80,7 +80,7 @@ You can read a great answer [here](https://github.com/uberVU/react-guide/blob/ma
 
 ## Using state to toggle information based on a checkbox 
 
-```
+```js
     var Checkbox = React.createClass({
       getInitialState: function(){
         return {
@@ -109,7 +109,7 @@ You can read a great answer [here](https://github.com/uberVU/react-guide/blob/ma
 
 As we've seen, state is a fantastic way of managing the changes to a component, but we can also use it to pass down data to children components as their props. Let's review this example:
 
-```
+```js
 var Parent = React.createClass({
   getInitialState: function(){
     return {
