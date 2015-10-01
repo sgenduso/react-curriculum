@@ -151,10 +151,14 @@ Take a look at this example in the console and what do you see? The child's prop
 ## Assignment
 
 * Read [this](https://medium.com/react-tutorials/react-state-14a6d4f736f5) Tutorial
-* Presidents Challenge ([![Gyazo](https://i.gyazo.com/09ea982695533095e274db62a363db0c.gif)](https://gyazo.com/09ea982695533095e274db62a363db0c))
+* Presidents Challenge
   - Create Three components, PresidentList, AddPresident and President. 
     + PresidentList should render a div with the AddPresident component and President Component 
     + AddPresident should render a div with a form. Inside the form there should be an text input and a button/input to submit the form. 
     + When the form is submitted, you should capture the value of what the user typed in an add it to the presidents array.
+    + The presidents array should start with the value of ["Washington", "Adams", "Jefferson"]
   - Include hints about e.target / concat instead of push 
 
+Here is what it should look like: 
+
+([![Gyazo](https://i.gyazo.com/09ea982695533095e274db62a363db0c.gif)](https://gyazo.com/09ea982695533095e274db62a363db0c))
