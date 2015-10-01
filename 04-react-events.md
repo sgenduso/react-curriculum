@@ -78,5 +78,6 @@ We can see in our console that the props have changed, but nothing is being rend
 * Build an application that contains two components, one called App and another called Form. 
     * Your App component should contain a button tag that when clicked alerts "Hi!". Your App component should also contain your Form component.
     * Your Form component should contain a form with a text input, checkbox and submit button. When the form is submitted you should prevent the default action (refreshing the page) and console.log "SO AWESOME!". When there is a keypress inside of the text input, you should console.log the keyCode of the character you just typed. When the checkbox is checked, you should console.log the nativeEvent (research nativeEvent with react)
+DEMO: [![Gyazo](https://i.gyazo.com/9719b8b5250297696ed8610863560318.gif)](https://gyazo.com/9719b8b5250297696ed8610863560318)
 
 
