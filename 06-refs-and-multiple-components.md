@@ -403,8 +403,8 @@ Finally, let's call our onCustomSubmit method (that was passed to us as props fr
               <h1>Form Values</h1>
               <ul>
                 <li>Input: {this.state.val}</li>
-                <li>Checkbox: {this.state.checkboxVal}</li>
-                <li>Radio: {this.state.radioVal}</li>
+                <li>Checkbox: {this.state.checkboxVal.toString()}</li>
+                <li>Radio: {this.state.radioVal.toString()}</li>
               </ul>
               <Form onCustomSubmit={this.update}/>
             </div>
