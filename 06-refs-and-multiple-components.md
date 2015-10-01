@@ -465,6 +465,18 @@ Finally, let's call our onCustomSubmit method (that was passed to us as props fr
 
 ## Assignment
 
+* Create an RGB color slider!
+
+    [![Gyazo](https://i.gyazo.com/b13bf019ecb65aebfc9c786ac329d657.gif)](https://gyazo.com/b13bf019ecb65aebfc9c786ac329d657)
+
+  Suggestions: 
+
+  1. Make two components for your app: `App` and `Slider`.
+  2. Your `App` component should display the current RGB values to the user (both numerically and with the actual color), along with sliders to change each value.
+  3. Your `App` should set the initial state of each slider, and should have an `update` method to update the state whenever the user moves a slider.
+  4. Each `Slider` should contain an `input` with a `type` attribute of `range`, a `min` attribute of 0 and a `max` attribute of 255.
+  5. Use `refs` to properly identify the sliders when you need to update!
+
 * Read [this](https://facebook.github.io/react/docs/working-with-the-browser.html) for a better understanding of
 * Read [this](https://facebook.github.io/react/docs/more-about-refs.html#summary) summary on refs - it is essential to understand when and when not to use them.
 * Read [this](http://stackoverflow.com/questions/25941585/react-refs-with-components) post on when to NOT use refs
