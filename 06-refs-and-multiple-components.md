@@ -282,7 +282,7 @@ Since we're going to be building larger applications, let's build an example ste
   - `checkboxValue` is equal to `true` or `false` and is determined by whether the checkbox is checked
   - `radioValue` is equal to `true` or `false` and is determined by whether the radio button is clicked
 
-Finally, let's call our onCustomSubmit method (that was passed to us as props from the App component) and pass in `inputText`, `checkboxValue` and `radioValue`.
+  Finally, let's call our onCustomSubmit method (that was passed to us as props from the App component) and pass in `inputText`, `checkboxValue` and `radioValue`.
 
     ```js
       var Form = React.createClass({
@@ -451,6 +451,10 @@ Finally, let's call our onCustomSubmit method (that was passed to us as props fr
 
       React.render(<App/>,document.body)
     ```
+
+DEMO:
+
+[![Gyazo](https://i.gyazo.com/3e831d2a66076f23288883c7e60e8e60.gif)](https://gyazo.com/3e831d2a66076f23288883c7e60e8e60)
 
 ## Bonuses
 
