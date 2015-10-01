@@ -100,7 +100,7 @@ You can see these methods in action with this example:
     - Create two components, MovieSearchForm and Movie
     - MovieSearchForm should render a form and the Movie component (which should have no information at first)
     - A user should be able to search for a title of the movie, and when they submit the form, an ajax call should be made to `http://omdbapi.com?t=` + the value of what the user searched. 
-    - The Movie component should then be updated with the title of the movie and the image poster.
+    - The Movie component should then be updated with the title of the movie, the year and the image poster.
     - You do not **need** to use any component life cycle methods, but you absolutely can.
 
     Here is what it the OMDB Assignment should look like: 
