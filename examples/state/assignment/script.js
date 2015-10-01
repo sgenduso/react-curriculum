@@ -29,7 +29,7 @@ var AddPresident = React.createClass({
     this.setState({
       typedVal: e.target.value
     })
-  }
+  },
   handleAddNewPresident: function(e){
     e.preventDefault();
     this.props.addNew(this.state.typedVal)
