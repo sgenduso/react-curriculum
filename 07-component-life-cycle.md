@@ -102,3 +102,7 @@ You can see these methods in action with this example:
     - A user should be able to search for a title of the movie, and when they submit the form, an ajax call should be made to `http://omdbapi.com?t=` + the value of what the user searched. 
     - The Movie component should then be updated with the title of the movie and the image poster.
     - You do not **need** to use any component life cycle methods, but you absolutely can.
+
+    Here is what it the OMDB Assignment should look like: 
+
+    [![Gyazo](https://i.gyazo.com/cbf99774cb8a8bc7507ebad5e651dffc.gif)](https://gyazo.com/cbf99774cb8a8bc7507ebad5e651dffc)

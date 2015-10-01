@@ -21,4 +21,4 @@ var GithubProfile = React.createClass({
   }
 });
 
-React.render(<GithubProfile>colt</GithubProfile>, document.body)
+React.render(<GithubProfile>octocat</GithubProfile>, document.body)

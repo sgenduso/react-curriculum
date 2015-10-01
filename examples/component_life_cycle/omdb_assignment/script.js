@@ -23,7 +23,7 @@ var MovieSearchForm = React.createClass({
     return (
       <div>
         <form onSubmit={this.movieSearch}>
-          <input ref="search" type="text" autoFocus/>
+          <input ref="search" type="text" autoFocus/> &nbsp;
           <input type="submit" value="Search"/>
         </form>
         <Movie data={this.state.data}/>
