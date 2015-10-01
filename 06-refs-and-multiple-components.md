@@ -477,7 +477,7 @@ Finally, let's call our onCustomSubmit method (that was passed to us as props fr
   4. Each `Slider` should contain an `input` with a `type` attribute of `range`, a `min` attribute of 0 and a `max` attribute of 255.
   5. Use `refs` to properly identify the sliders when you need to update!
 
-* Read [this](https://facebook.github.io/react/docs/working-with-the-browser.html) for a better understanding of
+* Read [this](https://facebook.github.io/react/docs/working-with-the-browser.html) for a better understanding of working with React's virtual DOM.
 * Read [this](https://facebook.github.io/react/docs/more-about-refs.html#summary) summary on refs - it is essential to understand when and when not to use them.
 * Read [this](http://stackoverflow.com/questions/25941585/react-refs-with-components) post on when to NOT use refs
 * Watch [this](https://egghead.io/lessons/react-using-refs-to-access-components) video and build the application. Refactor this app to use the React.findDOMNode method.
