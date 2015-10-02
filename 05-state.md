@@ -155,9 +155,10 @@ Take a look at this example in the console and what do you see? The child's prop
   - Create Three components, PresidentList, AddPresident and President. 
     + PresidentList should render a div with the AddPresident component and President Component 
     + AddPresident should render a div with a form. Inside the form there should be an text input and a button/input to submit the form. 
-    + When the form is submitted, you should capture the value of what the user typed in an add it to the presidents array.
-    + The presidents array should start with the value of ["Washington", "Adams", "Jefferson"]
-  - Include hints about e.target / concat instead of push 
+    + When the form is submitted, you should capture the value of what the user typed in an add it to an array called `presidents`.
+    + The `presidents` array should start with the value of ["Washington", "Adams", "Jefferson"]
+    + When you add a president, you will change the state of the array, which means that what you return will be a new array with the president you have just added. You may think the `.push` method will work, but remember what that method returns to you. You want to add additional items to an array, but return a new array with the added item. Using the `.concat` method will be far easier.
+  - In order to capture form value you can use `e.target`. Take a look at the previous examples and [these docs](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) for some more insight  
 
 Here is what it should look like: 
 
