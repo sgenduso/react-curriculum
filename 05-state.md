@@ -44,7 +44,7 @@ You can read a great answer [here](https://github.com/uberVU/react-guide/blob/ma
 ## Using state to display typing
 
 ```js
-    var App = React.createClass({
+var App = React.createClass({
   getInitialState: function(){
     return {
       text: ""
