@@ -282,7 +282,7 @@ Since we're going to be building larger applications, let's build an example ste
   - `checkboxValue` is equal to `true` or `false` and is determined by whether the checkbox is checked
   - `radioValue` is equal to `true` or `false` and is determined by whether the radio button is clicked
 
-Finally, let's call our onCustomSubmit method (that was passed to us as props from the App component) and pass in `inputText`, `checkboxValue` and `radioValue`.
+  Finally, let's call our onCustomSubmit method (that was passed to us as props from the App component) and pass in `inputText`, `checkboxValue` and `radioValue`.
 
     ```js
       var Form = React.createClass({
@@ -403,8 +403,8 @@ Finally, let's call our onCustomSubmit method (that was passed to us as props fr
               <h1>Form Values</h1>
               <ul>
                 <li>Input: {this.state.val}</li>
-                <li>Checkbox: {this.state.checkboxVal}</li>
-                <li>Radio: {this.state.radioVal}</li>
+                <li>Checkbox: {this.state.checkboxVal.toString()}</li>
+                <li>Radio: {this.state.radioVal.toString()}</li>
               </ul>
               <Form onCustomSubmit={this.update}/>
             </div>
@@ -452,6 +452,10 @@ Finally, let's call our onCustomSubmit method (that was passed to us as props fr
       React.render(<App/>,document.body)
     ```
 
+DEMO:
+
+[![Gyazo](https://i.gyazo.com/3e831d2a66076f23288883c7e60e8e60.gif)](https://gyazo.com/3e831d2a66076f23288883c7e60e8e60)
+
 ## Bonuses
 
 - We are repeating ourselves a bunch with the renderFormWithNiceHeader and renderFormWithMeanHeader, how could we clean this up?
@@ -465,7 +469,19 @@ Finally, let's call our onCustomSubmit method (that was passed to us as props fr
 
 ## Assignment
 
-* Read [this](https://facebook.github.io/react/docs/working-with-the-browser.html) for a better understanding of
+* Create an RGB color slider!
+
+    [![Gyazo](https://i.gyazo.com/b13bf019ecb65aebfc9c786ac329d657.gif)](https://gyazo.com/b13bf019ecb65aebfc9c786ac329d657)
+
+  Suggestions: 
+
+  1. Make two components for your app: `App` and `Slider`.
+  2. Your `App` component should display the current RGB values to the user (both numerically and with the actual color), along with sliders to change each value.
+  3. Your `App` should set the initial state of each slider, and should have an `update` method to update the state whenever the user moves a slider.
+  4. Each `Slider` should contain an `input` with a `type` attribute of `range`, a `min` attribute of 0 and a `max` attribute of 255.
+  5. Use `refs` to properly identify the sliders when you need to update!
+
+* Read [this](https://facebook.github.io/react/docs/working-with-the-browser.html) for a better understanding of working with React's virtual DOM.
 * Read [this](https://facebook.github.io/react/docs/more-about-refs.html#summary) summary on refs - it is essential to understand when and when not to use them.
 * Read [this](http://stackoverflow.com/questions/25941585/react-refs-with-components) post on when to NOT use refs
 * Watch [this](https://egghead.io/lessons/react-using-refs-to-access-components) video and build the application. Refactor this app to use the React.findDOMNode method.

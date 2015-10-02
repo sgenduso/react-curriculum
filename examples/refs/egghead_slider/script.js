@@ -10,9 +10,9 @@ var App = React.createClass({
     this.setState({
       // we have to add the refs.inp to reference the div
       // using getDOMNode only works for one
-
-      red: React.findDOMNode(this.refs.red.refs.input).value
-      green: React.findDOMNode(this.refs.green.refs.input).value
+      
+      red: React.findDOMNode(this.refs.red.refs.input).value,
+      green: React.findDOMNode(this.refs.green.refs.input).value,
       blue: React.findDOMNode(this.refs.blue.refs.input).value
     })
   },

@@ -44,7 +44,7 @@ You can read a great answer [here](https://github.com/uberVU/react-guide/blob/ma
 ## Using state to display typing
 
 ```js
-    var App = React.createClass({
+var App = React.createClass({
   getInitialState: function(){
     return {
       text: ""
@@ -162,4 +162,4 @@ Take a look at this example in the console and what do you see? The child's prop
 
 Here is what it should look like: 
 
-([![Gyazo](https://i.gyazo.com/09ea982695533095e274db62a363db0c.gif)](https://gyazo.com/09ea982695533095e274db62a363db0c))
+[![Gyazo](https://i.gyazo.com/09ea982695533095e274db62a363db0c.gif)](https://gyazo.com/09ea982695533095e274db62a363db0c)
