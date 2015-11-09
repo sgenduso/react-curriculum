@@ -51,7 +51,7 @@ Solution:
 
 What happens if we don't include the number property or if we change it to be something that is not a number?
 
-Note: If you're using `bower` to connect React, be sure to `react.js` and not `react.min.js`. Validation warning errors will not show up in the console if you use the minified version.
+Validation warning errors will not show up in the console if you use the minified version.
 
 ## Creating Multiple Components
 
