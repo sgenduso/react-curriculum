@@ -37,19 +37,19 @@ Solution:
 ```js
     var AnswerToEverything = React.createClass({
       propTypes: {
-        number: React.PropTypes.number.isRequired
+        someValue: React.PropTypes.number.isRequired
       },
       render : function() {
         return (
-            <h1>Hello {this.props.number}</h1>
+            <h1>Hello {this.props.someValue}</h1>
         )
       }
     });
 
-    React.render(<AnswerToEverything number={42}/>, document.body)
+    React.render(<AnswerToEverything someValue={42}/>, document.body)
 ```
 
-What happens if we don't include the number property or if we change it to be something that is not a number?
+What happens if we don't include the `someValue` property or if we change it to be something that is not a number?
 
 Validation warning errors will not show up in the console if you use the minified version.
 
