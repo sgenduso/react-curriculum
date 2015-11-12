@@ -71,11 +71,12 @@ var Book = React.createClass({
 });
 
 var BookList = React.createClass({
-  books: books.map(function(book){
-    return (
-        <Book title={book}/>
-      )
-  }),
+  books: function() {
+    return books.map(function(book, index) {
+        return <Book title={book} key={index}/>
+    }
+  },
+  
   render: function() {
     return (
       <ul>
