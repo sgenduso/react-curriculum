@@ -4,7 +4,7 @@
 
 * Understand what `state` is in React and how to use it
 * Use setState to change the state of components
-* Combine props, events and state to builder more robust react applications
+* Combine props, events and state to build more robust react applications
 
 ## Introduction
 
@@ -65,7 +65,7 @@ var App = React.createClass({
     return (
       <div>
         <h1>{this.props.children}</h1>
-        <h1>{this.state.text}</h1>
+        <h2>{this.state.text}</h2>
         <input type="text" value={this.state.text} onChange={this.changeText} autoFocus/>
         <button onClick={this.clearText}>Clear Text</button>
 
@@ -116,7 +116,7 @@ var Parent = React.createClass({
     }
   },
   render: function() {
-    console.log("Parent's State", this.state)
+    console.log("Parent's State: ", this.state)
     return (
       <div>
         <Child firstName={this.state.names}/>
@@ -127,7 +127,7 @@ var Parent = React.createClass({
 
 var Child = React.createClass({
   render: function() {
-    console.log("Child's Props", this.props)
+    console.log("Child's Props: ", this.props)
     return (
       <div>
         CHECK YOUR CHROME CONSOLE!
