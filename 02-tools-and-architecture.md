@@ -2,7 +2,7 @@
 
 ## Objectives
 
-- Use the Chrome React Dev Tools to examine and debug applications 
+- Use the Chrome React Dev Tools to examine and debug applications
 - Examine other React applications using react-detector
 - Include React using Bower
 
@@ -23,7 +23,7 @@ Another very useful Chrome extention is react-detector, which will show you webi
 If you want to start using Bower instead of a CDN, learn some more about it [here](./bower) and then run `bower init` and then `bower install react --save`. Make sure to add `bower_components` to your `.gitignore`.
 
 ## Questions
- 
+
 * What is a React component?
 * Take a look at the following pages using react-detector and the react developer tools, how are they using React? What does their component structure look like? (or pick a couple apps from [this](https://github.com/facebook/react/wiki/Sites-Using-React) link and examine them)
     - [https://www.airbnb.com/](https://www.airbnb.com/)
@@ -32,11 +32,9 @@ If you want to start using Bower instead of a CDN, learn some more about it [her
     - [https://www.coursera.org/](https://www.coursera.org/)
     - [http://imgur.com/](http://imgur.com/)
     - [https://instagram.com/](https://instagram.com/)
-* What are props? 
+* What are props?
 
 ## Assignment
 
 * Read [this](https://facebook.github.io/react/docs/thinking-in-react.html) article. It is a great entry point to thinking about React components and architecture.
-* Rebuild the Hello World Assignment using Bower instead of the React CDN. 
-
-
+* Rebuild the Hello World Assignment using Bower instead of the React CDN.

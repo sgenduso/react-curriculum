@@ -3,7 +3,7 @@
 ## Unit 1
 
 * [Introduction to React](01-introduction-to-react.md)
-* [JSX](02-jsx.md)
+* [React JSX](02-react-jsx.md)
 * [Tools and Architecture](02-tools-and-architecture.md)
 * [Props](03-props.md)
 * [Events](04-react-events.md)
