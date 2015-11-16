@@ -258,7 +258,8 @@ With a dynamic user interface in place, let's connect it to the state inside our
     },
 
     handleChange: function(event) {
-      this.setState({ who: event.target.value });
+      var nextState = { who: event.target.value };
+      this.setState(nextState);
     },
 
     render: function() {
@@ -309,7 +310,8 @@ Now that our component class responds to user interface changes, let's expand it
     },
 
     handleChange: function(event) {
-      this.setState({ who: event.target.value });
+      var nextState = { who: event.target.value };
+      this.setState(nextState);
     },
 
     render: function() {

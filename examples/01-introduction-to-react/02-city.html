@@ -16,7 +16,8 @@
         },
 
         handleChange: function(event) {
-          this.setState({ place: event.target.value });
+          var nextState = { place: event.target.value };
+          this.setState(nextState);
         },
 
         render: function() {
