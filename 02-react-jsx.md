@@ -183,8 +183,8 @@ var element = (
 In addition to attributes, JavaScript expressions can also be used as children in JSX tags. These expressions use the exact same curly brace `{}` notation.
 
 ```jsx
-var city = 'Cheese';
-var element = <p>{who} Wizards</p>;
+var food = 'Cheese';
+var element = <p>{food} Wizards</p>;
 ```
 
 ### Exercise 7
