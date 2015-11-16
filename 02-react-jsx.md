@@ -56,7 +56,7 @@ HTML tags use a lowercase JSX tag name. Remember, `class` and `for` are reserved
 var element = <p className="bold">Tokyo Dog</p>;
 ```
 
-### Exercise 1
+### Exercise
 
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
@@ -73,7 +73,7 @@ var element = <ul>
 </ul>;
 ```
 
-### Exercise 2
+### Exercise
 
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
@@ -96,7 +96,7 @@ var Truck = React.createClass({
 var element = <Truck />;
 ```
 
-### Exercise 3
+### Exercise
 
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
@@ -127,7 +127,7 @@ var Trucks = React.createClass({
 var element = <Trucks />;
 ```
 
-### Exercise 4
+### Exercise
 
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
@@ -143,7 +143,7 @@ var source = 'http://i.imgur.com/nVPXKtz.jpg';
 var element = <img src={source} alt="Saffron Spice" />;
 ```
 
-### Exercise 5
+### Exercise
 
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
@@ -173,7 +173,7 @@ var element = (
 );
 ```
 
-### Exercise 6
+### Exercise
 
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
@@ -187,7 +187,7 @@ var food = 'Cheese';
 var element = <p>{food} Wizards</p>;
 ```
 
-### Exercise 7
+### Exercise
 
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
@@ -202,7 +202,7 @@ var element2 = <input type="button" disabled={true} />;
 var element3 = <input type="button" disabled={false} />;
 ```
 
-### Exercise 8
+### Exercise
 
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
@@ -217,7 +217,7 @@ var isHealthy = false;
 var element = <div className={isHealthy ? 'hide' : 'show'} />;
 ```
 
-### Exercise 9
+### Exercise
 
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
@@ -252,7 +252,7 @@ var element = <div>
 </div>;
 ```
 
-### Exercise 10
+### Exercise
 
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
@@ -265,7 +265,7 @@ In JSX, the `style` attribute accepts a JavaScript object with camel cased CSS p
 var element = <p style={{ backgroundColor: 'lightgreen', color: 'blue' }}>Happy Grillmore</p>;
 ```
 
-### Exercise 11
+### Exercise
 
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
@@ -285,7 +285,7 @@ var element = <div>
 </div>;
 ```
 
-### Exercise 12
+### Exercise
 
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
