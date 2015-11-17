@@ -1,22 +1,22 @@
-# React Todo
+# Assessment: React Todo
 
 ## Getting started
 
-You've made it to the end of this unit, congratulations! Your assignment is to build a Todo App in React using everything you have learned so far! 
+You've made it to the end of this unit, congratulations! Your assignment is to build a Todo App in React using everything you have learned so far!
 
 ## Requirements
 
-* A user should be able to create Todos 
+* A user should be able to create Todos
 * A user should be able to delete individual Todos
-* A user should be able to edit individual todos 
+* A user should be able to edit individual todos
 
 ## Here is an example
 
 [![Gyazo](https://i.gyazo.com/5b3ab94cf095437153ffd86605cad817.gif)](https://gyazo.com/5b3ab94cf095437153ffd86605cad817)
 
-## Bonuses 
+## Bonuses
 
-- Add a Backend! Save your todos to a database and use AJAX to perform CRUD on them. 
+- Add a Backend! Save your todos to a database and use AJAX to perform CRUD on them.
 - Separate Your Components into different files. Instead of using multiple script tags, use a tool like [browserify](http://browserify.org/) or [webpack](https://webpack.github.io/) to create modules on the front-end!
 
 ## Additional Resources To Keep Reviewing + Learning
