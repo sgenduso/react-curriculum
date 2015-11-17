@@ -47,7 +47,7 @@ Let's start by examining this simple React application.
 
 **TIP:** Type this code sample out *by hand* and then run it. No copy-and-paste cheating either. The sooner you start writing code, the sooner you start learning.
 
-`react.html`
+`hello.html`
 ```html
 <!DOCTYPE html>
 <html>
@@ -70,7 +70,7 @@ Let's start by examining this simple React application.
 </html>
 ```
 
-Open `react.html` in your browser and, if you've typed everything correctly, you'll see the following.
+Open `hello.html` in your browser and, if you've typed everything correctly, you'll see the following.
 
 ![Hello world](https://i.imgur.com/nKBW36S.png)
 
@@ -129,7 +129,7 @@ Now that you've gotten some practice with the fundamentals, it's time to build a
 
 Let's start by moving the presentation logic of the previous code sample into a custom component. The `React.createClass` function will create and return a component class given a `specification` object.
 
-`react.html`
+`hello.html`
 ```html
 <script>
   var Hello = React.createClass({
@@ -160,7 +160,7 @@ Update your code with the above changes. Make sure everything is working before 
 
 Now that our component class has some presentation logic, let's spice it up by adding some state.
 
-`react.html`
+`hello.html`
 ```html
 <script>
   var Hello = React.createClass({
@@ -199,7 +199,7 @@ Update your code with the above changes. Make sure everything is working before 
 
 Now that our component class has state, let's provide a dynamic user interface to change that state. To start off, we'll need to add elements to our component hierarchy.
 
-`react.html`
+`hello.html`
 ```html
 <script>
   var Hello = React.createClass({
@@ -249,7 +249,7 @@ If needed, update what you wrote earlier about how React works to take into acco
 
 With a dynamic user interface in place, let's connect it to the state inside our component class. Remember, React's one-way data bindings prevent changes made to the user interface from automatically propagating to the state. We'll have to write this code ourselves.
 
-`react.html`
+`hello.html`
 ```html
 <script>
   var Hello = React.createClass({
@@ -301,7 +301,7 @@ Update your code with the above changes. Make sure everything is working before 
 
 Now that our component class responds to user interface changes, let's expand its behavior so it's more interesting.
 
-`react.html`
+`hello.html`
 ```html
 <script>
   var Hello = React.createClass({
