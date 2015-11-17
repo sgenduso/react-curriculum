@@ -295,7 +295,7 @@ var element = <div>
 * What are their `type`, `props`, and `children`?
 * **True or False:** Child comments can only use the `/* */` style.
 
-## How do you refactor into React JSX?
+## How do you refactor JavaScript into React JSX?
 
 Let's practice by refactoring the **Hello world** example from the previous chapter into JSX. Start by loading Babel into the DOM using a CDN. Usually this is done immediately after `react` and `react-dom` are loaded.
 
