@@ -2,6 +2,10 @@
 
 In this chapter, you'll learn what React JSX is, why it's important, and how to use it. By the end, you'll have built a React JSX application with guidance and be ready to build one of your own.
 
+| Duration by yourself | Duration as a class |
+|----------------------|---------------------|
+| TBD                  | TBD                 |
+
 ## What is React JSX?
 
 [React JSX](https://facebook.github.io/react/docs/jsx-in-depth.html) lets you create `ReactElement` objects using an HTML-like syntax and a transpiler. For example, when the following JSX code is run through a transpiler:
@@ -344,6 +348,10 @@ ReactDOM.render(
 ```
 
 Open or refresh the page in your browser and make sure everything still works. Congratulations! You've just written your first React JSX application.
+
+## Summary
+
+In this chapter, you were exposed to the fundamentals of React JSX—an HTML-like syntax for creating `ReactElement` objects. In addition, you practiced writing React JSX and transpiling it into JavaScript using Babel, a popular JavaScript transpiler. At this point, you're well on your way to writing larger, more sophisticated React applications.
 
 ## Assignment
 
