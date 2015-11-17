@@ -82,6 +82,8 @@ Refresh the browser and voilà! Now, the application now has two distinct and is
 
 ![Two component hierarchies](https://dl.dropboxusercontent.com/s/o5tch5gpi5fgkj0/F2582C11-85FC-48B5-B7CB-F8FCFF246E32-40520-00010A39EC7A6348.gif?dl=0)
 
+**NOTE:** The React Developer Tools use the `displayName` property of the component's class as the name of the component in the tree view. When Babel transpiles a component class, it automatically sets the value of the `displayName` property to the name of the variable in which the class is stored.
+
 ### Exercise
 
 In your own words, write down how you might reuse a component hierarchy and for what specific use cases.
