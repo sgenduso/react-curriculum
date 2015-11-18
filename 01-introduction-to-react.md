@@ -315,16 +315,16 @@ Now that our component class responds to user interface changes, let's expand it
     },
 
     render: function() {
-      var greeting;
+      var message;
 
       if (this.state.who.trim() === '') {
-        greeting = 'Hello?';
+        message = 'Hello?';
       } else {
-        greeting = 'Hello ' + this.state.who;
+        message = 'Hello ' + this.state.who;
       }
 
       return React.createElement('div', null,
-        React.createElement('h1', null, greeting),
+        React.createElement('h1', null, message),
         React.createElement('input', {
           onChange: this.handleChange,
           type: 'text',
@@ -341,7 +341,7 @@ Now that our component class responds to user interface changes, let's expand it
 </script>
 ```
 
-The main difference in the above code sample is that the `render` function now builds up a local `greeting` variable which is then passed into the `h1` element as its child. Note that `greeting` is *not* part of the component's state.
+The main difference in the above code sample is that the `render` function now builds up a local `message` variable which is then passed into the `h1` element as its child. Note that `message` is *not* part of the component's state.
 
 A component's state should only contain data that its event handlers may change in order to trigger a user interface update. In real applications, this data tends to be very small. When building a stateful component, think about the minimal possible representation of its state and only store those values in the `this.state` object. Then, inside the `render` function, simply compute any other information you need based on `this.state`.
 

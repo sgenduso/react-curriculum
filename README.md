@@ -5,7 +5,7 @@
 * [Introduction to React](01-introduction-to-react.md)
 * [React JSX](02-react-jsx.md)
 * [React Developer Tools](03-react-developer-tools.md)
-* [Props](04-props.md)
+* [Props and State](04-props-and-state.md)
 * [React Events](05-react-events.md)
 * [State](06-state.md)
 * [Refs and Multiple Components](07-refs-and-multiple-components.md)

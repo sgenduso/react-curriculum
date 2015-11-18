@@ -319,19 +319,19 @@ Now, let's refactor the component class's `render` function into React JSX. Simp
 
 ```jsx
 render: function() {
-  var greeting;
+  var message;
 
   if (this.state.who.trim() === '') {
-    greeting = 'Hello?';
+    message = 'Hello?';
   } else {
-    greeting = 'Hello ' + this.state.who;
+    message = 'Hello ' + this.state.who;
   }
 
   return <div>
-    <h1>{greeting}</h1>
+    <h1>{message}</h1>
     <input
       onChange={this.handleChange}
-      type={'text'}
+      type="text"
       value={this.state.who}
     />
   </div>;
