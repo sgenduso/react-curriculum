@@ -1,3 +1,90 @@
+#### [⇐ Previous](03-react-developer-tools.md) | [Next ⇒](05-props-and-state.md)
+
+# React Events
+
+## Objectives
+
+- Understand what React events are and how they work
+- Include React events in our components
+- Understand the limitations of props for components
+
+Just like in our previous JavaScript applications, we manipulated the DOM by listening for certain events (click, mouse events, submit, key events, etc.) and we will do the same exact thing with our virtual DOM!
+
+## Adding your first event
+
+Let's start by creating a component called Button which will render a button with the text "Click Me" (try to do this using props). Try this first before you look at the solution!
+
+```js
+    var Button = React.createClass({
+      render: function() {
+        return (
+          <button>{this.props.text}</button>
+        );
+      }
+    });
+
+    React.render(<Button text="Click Me!"/>,document.body)
+```
+
+Now that we have a button, let's add a function to be run when a click event occurs, we will call this function sayHi and then attach it to the button.
+
+```js
+    var Button = React.createClass({
+      sayHi: function(){
+        alert("hi!")
+      },
+      render: function() {
+        return (
+          <button onClick={this.sayHi}>{this.props.text}</button>
+        );
+      }
+    });
+
+    React.render(<Button text="Click Me!"/>,document.body)
+```
+
+Notice that we are using the keyword `this` to refer to our component which has the sayHi method attached to it. Without the keyword `this`, sayHi will not be defined!
+
+Now let's write a method that tries to change the props of the component when the button is clicked. Something like this:
+
+```js
+    var Button = React.createClass({
+      changeText: function(){
+        this.props.text = "BOOM!"
+        console.log(this.props.text)
+      },
+      render: function() {
+        return (
+          <button onClick={this.changeText}>{this.props.text}</button>
+        );
+      }
+    });
+
+    React.render(<Button text="Click Me!"/>,document.body)
+```
+
+We can see in our console that the props have changed, but nothing is being rendered or changed on the page! This is because a component cannot update its own props, but can update its state and the props of its children. Props can only change when a component's parent renders the component again with different properties. This means that we will have to use something different and that is called `state` - we will examine that next! But first, some more practice.
+
+## Questions
+
+* What are some events you can add in React?
+* How do you add an event to a component in react?
+* How do you gain access to the native event object?
+* When you trigger a react event, you gain access to an event object, but when you examine that object you will see that many of the values are `null` and that you can not get access to properties like `target` or `clientX` and `clientY`. What kind of object is this?
+* How do you gain access to the native event object in react?
+
+## Assignment
+
+* Read through some of the react events in the [docs](https://facebook.github.io/react/docs/events.html)
+* Read how DOM events bubble up and become component events [here](http://www.newmediacampaigns.com/blog/react-bubble-events)
+* Build an application that contains two components, one called App and another called Form.
+    * Your App component should contain a button tag that when clicked alerts "Hi!". Your App component should also contain your Form component.
+    * Your Form component should contain a form with a text input, checkbox and submit button. When the form is submitted you should prevent the default action (refreshing the page) and console.log "SO AWESOME!". When there is a keypress inside of the text input, you should console.log the keyCode of the character you just typed. When the checkbox is checked, you should console.log the nativeEvent (research nativeEvent with react)
+
+DEMO: [![Gyazo](https://i.gyazo.com/9719b8b5250297696ed8610863560318.gif)](https://gyazo.com/9719b8b5250297696ed8610863560318)
+
+
+
 # State
 
 ## Objectives
@@ -77,7 +164,7 @@ var App = React.createClass({
 React.render(<App>Type in here!</App>, document.body)
 ```
 
-## Using state to toggle information based on a checkbox 
+## Using state to toggle information based on a checkbox
 
 ```js
     var Checkbox = React.createClass({
@@ -152,14 +239,16 @@ Take a look at this example in the console and what do you see? The child's prop
 
 * Read [this](https://medium.com/react-tutorials/react-state-14a6d4f736f5) Tutorial
 * Presidents Challenge
-  - Create Three components, PresidentList, AddPresident and President. 
-    + PresidentList should render a div with the AddPresident component and President Component 
-    + AddPresident should render a div with a form. Inside the form there should be an text input and a button/input to submit the form. 
+  - Create Three components, PresidentList, AddPresident and President.
+    + PresidentList should render a div with the AddPresident component and President Component
+    + AddPresident should render a div with a form. Inside the form there should be an text input and a button/input to submit the form.
     + When the form is submitted, you should capture the value of what the user typed in an add it to an array called `presidents`.
     + The `presidents` array should start with the value of ["Washington", "Adams", "Jefferson"]
     + When you add a president, you will change the state of the array, which means that what you return will be a new array with the president you have just added. You may think the `.push` method will work, but remember what that method returns to you. You want to add additional items to an array, but return a new array with the added item. Using the `.concat` method will be far easier.
   - In order to capture form value you can use `e.target`. Take a look at the previous examples and [these docs](https://developer.mozilla.org/en-US/docs/Web/API/Event/target) for some more insight  
 
-Here is what it should look like: 
+Here is what it should look like:
 
 [![Gyazo](https://i.gyazo.com/09ea982695533095e274db62a363db0c.gif)](https://gyazo.com/09ea982695533095e274db62a363db0c)
+
+#### [⇐ Previous](03-react-developer-tools.md) | [Next ⇒](05-props-and-state.md)

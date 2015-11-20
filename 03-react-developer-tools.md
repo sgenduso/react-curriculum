@@ -1,4 +1,4 @@
-#### [⇐ Previous](02-react-jsx.md) | [Next ⇒](04-props-and-state.md)
+#### [⇐ Previous](02-react-jsx.md) | [Next ⇒](04-react-events.md)
 
 # React Developer Tools
 
@@ -108,4 +108,4 @@ Afterwards, read the article called [Thinking in React](https://facebook.github.
 
 [GitHub - facebook/react-devtools](https://github.com/facebook/react-devtools)
 
-#### [⇐ Previous](02-react-jsx.md) | [Next ⇒](04-props-and-state.md)
+#### [⇐ Previous](02-react-jsx.md) | [Next ⇒](04-react-events.md)

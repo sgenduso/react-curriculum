@@ -1,4 +1,6 @@
-# Refs and Multiple Components
+#### [⇐ Previous](06-component-life-cycle.md) | [Next ⇒](08-assessment-react-todo.md)
+
+# Refs and Timers
 
 ## Objectives
 
@@ -68,7 +70,7 @@ Since we're going to be building larger applications, let's build an example ste
       var App = React.createClass({
         render: function() {
           return (
-            
+
             )
         }
       });
@@ -85,7 +87,7 @@ Since we're going to be building larger applications, let's build an example ste
         render: function() {
           return (
             <div>
-            
+
             </div>
           );
         }
@@ -106,7 +108,7 @@ Since we're going to be building larger applications, let's build an example ste
       });
     ```
 
-    2. Our App Component should have an initialState with the keys and values of: 
+    2. Our App Component should have an initialState with the keys and values of:
       ```js
       {
         val: "",
@@ -115,7 +117,7 @@ Since we're going to be building larger applications, let's build an example ste
       }
       ```
 
-    Answer: 
+    Answer:
 
     ```js
       var App = React.createClass({
@@ -158,7 +160,7 @@ Since we're going to be building larger applications, let's build an example ste
           <h1>Some things will go here....</h1>
         )
       }
-    }); 
+    });
     ```
 
 3. Your App component should render the Header with the text "Yeah!" as well an `<h1>` with the text "Form Values" and then a `<ul>` with the following `<li>`s
@@ -233,7 +235,7 @@ Since we're going to be building larger applications, let's build an example ste
       });
     ```
 
-5. Let's move onto our `Form` component. Our Form component should render a `<div>` with a `<form>` inside. The form should have an onSubmit event that runs a method called captureValue. This means we will also have to define a method called captureValue. 
+5. Let's move onto our `Form` component. Our Form component should render a `<div>` with a `<form>` inside. The form should have an onSubmit event that runs a method called captureValue. This means we will also have to define a method called captureValue.
 
     ```js
       var Form = React.createClass({
@@ -244,7 +246,7 @@ Since we're going to be building larger applications, let's build an example ste
           return (
             <div>
               <form onSubmit={this.captureValue}>
-                
+
               </form>
             </div>
           );
@@ -473,7 +475,7 @@ DEMO:
 
     [![Gyazo](https://i.gyazo.com/b13bf019ecb65aebfc9c786ac329d657.gif)](https://gyazo.com/b13bf019ecb65aebfc9c786ac329d657)
 
-  Suggestions: 
+  Suggestions:
 
   1. Make two components for your app: `App` and `Slider`.
   2. Your `App` component should display the current RGB values to the user (both numerically and with the actual color), along with sliders to change each value.
@@ -486,3 +488,4 @@ DEMO:
 * Read [this](http://stackoverflow.com/questions/25941585/react-refs-with-components) post on when to NOT use refs
 * Watch [this](https://egghead.io/lessons/react-using-refs-to-access-components) video and build the application. Refactor this app to use the React.findDOMNode method.
 
+#### [⇐ Previous](06-component-life-cycle.md) | [Next ⇒](08-assessment-react-todo.md)

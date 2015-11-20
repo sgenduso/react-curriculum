@@ -5,12 +5,11 @@
 * [Introduction to React](01-introduction-to-react.md)
 * [React JSX](02-react-jsx.md)
 * [React Developer Tools](03-react-developer-tools.md)
-* [Props and State](04-props-and-state.md)
-* [React Events](05-react-events.md)
-* [State](06-state.md)
-* [Refs and Multiple Components](07-refs-and-multiple-components.md)
-* [Component Life Cycle](08-component-life-cycle.md)
-* [Assessment: React Todo](09-assessment-react-todo.md)
+* [React Events](04-react-events.md)
+* [Props and State](05-props-and-state.md)
+* [Component Life Cycle](06-component-life-cycle.md)
+* [Refs and Timers](07-refs-and-timers.md)
+* [Assessment: React Todo](08-assessment-react-todo.md)
 
 ### How This Curriculum Works
 
