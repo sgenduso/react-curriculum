@@ -250,7 +250,7 @@ var element = <div>
 In JSX, the `style` attribute accepts a JavaScript object with camel cased CSS properties.
 
 ```jsx
-var element = <p style={{ backgroundColor: 'lightgreen', color: 'blue' }}>Happy Grillmore</p>;
+var element = <p style={{ backgroundColor: 'darkblue', color: 'lightgreen' }}>Happy Grillmore</p>;
 ```
 
 * How many `ReactElement` objects are created?

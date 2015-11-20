@@ -1,4 +1,4 @@
-#### [⇐ Previous](02-react-jsx.md) | [Next ⇒](04-react-events.md)
+#### [⇐ Previous](02-react-jsx.md) | [Next ⇒](04-synthetic-events.md)
 
 # React Developer Tools
 
@@ -63,17 +63,46 @@ Find another React application from this list of [sites using React](https://git
 
 ## What's a React component exactly?
 
-With the React Developers Tools, you can finally see that **components** are instances of React component classes and HTML tags. And, a component hierarchy is made up of a root component that possibly has children, grandchildren, etc.
+With the React Developers Tools, you can finally see that **components** are instances of React component classes and HTML tags. And, a component hierarchy is made up of a root component with possible children, grandchildren, etc.
 
-We can confirm this by rendering a second component hierarchy inside the **Hello world** application using the same root component class. First, let's add another container element to the DOM right under the existing container element.
-
-```html
-<div id="helloAgain"></div>
-```
-
-Then, we'll add another `ReactDOM.render` function call right under the existing function call.
+We can confirm this by rendering a second component hierarchy inside the **Hello world** application using the same root component class.
 
 ```jsx
+var Hello = React.createClass({
+  getInitialState: function() {
+    return { who: 'world' };
+  },
+
+  handleChange: function(event) {
+    var nextState = { who: event.target.value };
+    this.setState(nextState);
+  },
+
+  render: function() {
+    var message;
+
+    if (this.state.who.trim() === '') {
+      message = 'Hello?';
+    } else {
+      message = 'Hello ' + this.state.who;
+    }
+
+    return <div>
+      <h1>{message}</h1>
+      <input
+        onChange={this.handleChange}
+        type="text"
+        value={this.state.who}
+      />
+    </div>;
+  }
+});
+
+ReactDOM.render(
+  <Hello />,
+  document.getElementById('hello')
+);
+
 ReactDOM.render(
   <Hello />,
   document.getElementById('helloAgain')
@@ -84,17 +113,17 @@ Refresh the browser and voilà! Now, the application now has two distinct and is
 
 ![Two component hierarchies](https://dl.dropboxusercontent.com/s/o5tch5gpi5fgkj0/F2582C11-85FC-48B5-B7CB-F8FCFF246E32-40520-00010A39EC7A6348.gif?dl=0)
 
-**NOTE:** The React Developer Tools use the `displayName` property of the component's class as the name of the component in the tree view. When Babel transpiles a component class, it automatically sets the value of the `displayName` property to the name of the variable in which the class is stored.
+When displaying components in the tree view, the React Developer Tools names each component using the value of its `displayName` property. When Babel transpiles a component class, it automatically sets this as the variable name where the component class is stored. So, in this case, the both components are named `<Hello />` because their component class is stored in a variable named `Hello.`
 
 ### Exercise
 
 In your own words, write down how you might reuse a component hierarchy and for what specific use cases.
 
-Then, log into your [Facebook](https://www.facebook.com/) account, if you have one, and see if you can figure out which component hierarchies are being reused on the timeline.
+Then log into your [Facebook](https://www.facebook.com/) account, if you have one, and see if you can figure out which component hierarchies are being reused on the timeline.
 
 ## Summary
 
-In this chapter, you were exposed to the fundamentals of the React Developer Tools. You got to practice inspecting and editing both personal and production React applications. At this point, you're ready to write larger, more sophisticated React applications.
+In this chapter, you were exposed to the fundamentals of the React Developer Tools. You got to practice inspecting and editing both personal and production React applications. At this point, you're ready to write more sophisticated React applications.
 
 ## Assignment
 
@@ -108,4 +137,4 @@ Afterwards, read the article called [Thinking in React](https://facebook.github.
 
 [GitHub - facebook/react-devtools](https://github.com/facebook/react-devtools)
 
-#### [⇐ Previous](02-react-jsx.md) | [Next ⇒](04-react-events.md)
+#### [⇐ Previous](02-react-jsx.md) | [Next ⇒](04-synthetic-events.md)

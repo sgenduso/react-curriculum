@@ -1,6 +1,6 @@
 #### [⇐ Previous](07-refs-and-timers.md)
 
-# Assessment: React Todo
+# Final Assignment: React Todo
 
 ## Getting started
 

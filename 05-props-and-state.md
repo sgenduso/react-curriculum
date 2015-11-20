@@ -1,4 +1,4 @@
-#### [⇐ Previous](04-react-events.md) | [Next ⇒](06-component-life-cycle.md)
+#### [⇐ Previous](04-synthetic-events.md) | [Next ⇒](06-component-life-cycle.md)
 
 # Props and State
 
@@ -190,6 +190,12 @@ In React, data flows from owner to owned component through props as discussed ab
 
 [DESCRIBE UPDATESTATE FUNCTION]
 
+[DESCRIBE AUTOBINDING]
+
+Before being triggered, event handlers are automatically bound to a component instance. In other words, when an event handler is invoked, the `this` variable inside the function refers to the component that defines the event handler. In React, this is known as **autobinding** and will make more sense when you start building larger React applications.
+
+**NOTE:** Autobinding only works when registering event handlers inside component classes created by the `React.createClass()` function and *not* with the ES2015 `class` syntax.
+
 ### Exercise
 
 Type this out and write stuff in your own words.
@@ -216,4 +222,4 @@ Words, mouth, memories.
 * [React docs - Component Life Cycle](https://facebook.github.io/react/docs/component-specs.html)
 * [React docs - Multiple Components](https://facebook.github.io/react/docs/multiple-components.html)
 
-#### [⇐ Previous](04-react-events.md) | [Next ⇒](06-component-life-cycle.md)
+#### [⇐ Previous](04-synthetic-events.md) | [Next ⇒](06-component-life-cycle.md)
