@@ -1,3 +1,5 @@
+#### [⇐ Previous](02-react-jsx.md) | [Next ⇒](04-props-and-state.md)
+
 # React Developer Tools
 
 In this chapter, you'll learn what the React Developer Tools are, why they're important, and how to use them. By the end, you'll have used them to inspect and edit personal as well as production React applications.
@@ -105,3 +107,5 @@ Afterwards, read the article called [Thinking in React](https://facebook.github.
 ## Reference
 
 [GitHub - facebook/react-devtools](https://github.com/facebook/react-devtools)
+
+#### [⇐ Previous](02-react-jsx.md) | [Next ⇒](04-props-and-state.md)

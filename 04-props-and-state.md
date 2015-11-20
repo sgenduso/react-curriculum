@@ -1,3 +1,5 @@
+#### [⇐ Previous](03-react-developer-tools.md)
+
 # Props and State
 
 - Understand what props and states are and how they're used within component classes
@@ -205,3 +207,5 @@ Words, mouth, memories.
 * [Medium - React Properties by Christopher Pitt](https://medium.com/react-tutorials/react-properties-ef11cd55caa0)
 * [React docs - Component Life Cycle](Component Specs and Lifecycle)
 * [React docs - Multiple Components](https://facebook.github.io/react/docs/multiple-components.html)
+
+#### [⇐ Previous](03-react-developer-tools.md)
