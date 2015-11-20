@@ -1,3 +1,5 @@
+#### [⇐ Previous](01-introduction-to-react.md) | [Next ⇒](03-react-developer-tools.md)
+
 # React JSX
 
 In this chapter, you'll learn what React JSX is, why it's important, and how to use it. By the end, you'll have built a React JSX application with guidance and be ready to build one of your own.
@@ -379,3 +381,5 @@ However, feel free to use any of the [supported tags and attributes](https://fac
 * [React Docs - JSX in Depth](https://facebook.github.io/react/docs/jsx-in-depth.html)
 * [React Docs - Self-closing Tag](https://facebook.github.io/react/tips/self-closing-tag.html)
 * [Wikipedia - Source-to-source compiler](https://en.wikipedia.org/wiki/Source-to-source_compiler)
+
+#### [⇐ Previous](01-introduction-to-react.md) | [Next ⇒](03-react-developer-tools.md)
