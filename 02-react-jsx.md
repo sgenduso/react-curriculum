@@ -6,7 +6,7 @@
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
-| TBD                  | TBD                 |
+| About 1.5 hours      | TBD                 |
 
 ## What is React JSX?
 
