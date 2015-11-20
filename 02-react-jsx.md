@@ -2,7 +2,7 @@
 
 # React JSX
 
-In this chapter, you'll learn what React JSX is, why it's important, and how to use it. By the end, you'll have built a React JSX application with guidance and be ready to build one of your own.
+[JSX](https://facebook.github.io/jsx/), or JavaScript XML, is a JavaScript syntax extension that looks similar to XML. In this chapter, you'll learn what React JSX is, why it's important, and how to use it. By the end, you'll have built a React JSX application with guidance and be ready to build one of your own.
 
 | Duration by yourself | Duration as a class |
 |----------------------|---------------------|
