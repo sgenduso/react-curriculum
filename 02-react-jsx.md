@@ -50,11 +50,13 @@ React developers argue that the best solution for this problem is to use the exp
 
 Under the hood, React JSX transforms HTML-like elements, attributes, and children into arguments that are passed to the `React.createElement` function. Both HTML tags and React component classes can be transformed from JSX to JavaScript.
 
-For the following exercises, use the [Babel REPL](https://babeljs.io/repl/) to transpile the React JSX code sample into JavaScript. Then write down your answers to each question.
+### Exercise
+
+For the following code samples, use the [Babel REPL](https://babeljs.io/repl/) to transpile the React JSX code sample into JavaScript. Then write down your answers to each question.
 
 **TIP:** Type each code sample out *by hand* and then run it. No copy-and-paste cheating either. The objective of these exercises is to start building muscle memory.
 
-### HTML tag
+#### HTML tag
 
 HTML tags use a lowercase JSX tag name. Remember, `class` and `for` are reserved keywords in JavaScript so `className` and `htmlFor` must be used instead.
 
@@ -62,13 +64,11 @@ HTML tags use a lowercase JSX tag name. Remember, `class` and `for` are reserved
 var element = <p className="bold">Tokyo Dog</p>;
 ```
 
-#### Exercise
-
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
 * **True or False:** Babel adds `use strict;` at the top of the transpiled "file".
 
-### Nested HTML tags
+#### Nested HTML tags
 
 As you might expect, HTML tags can be nested in JSX as well.
 
@@ -79,16 +79,12 @@ var element = <ul>
 </ul>;
 ```
 
-#### Exercise
-
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
 
-### React component class
+#### React component class
 
 React component classes can also be transformed from JSX to JavaScript. First, create a component class and store it in a local variable that starts with an uppercase letter. Then, use that variable name as the JSX tag name. The lowercase and uppercase convention helps to distinguish between HTML tags and React component classes.
-
-As previously mentioned, component classes must specify a `render` function that returns a single `ReactElement` object. But that single `ReactElement` object can contain other `ReactElement` objects as children. This is the first key to building complex user interfaces.
 
 ```jsx
 var Truck = React.createClass({
@@ -102,14 +98,14 @@ var Truck = React.createClass({
 var element = <Truck />;
 ```
 
-#### Exercise
+As previously mentioned, component classes must specify a `render` function that returns a single `ReactElement` object. But that single `ReactElement` object can contain other `ReactElement` objects as children. This is the first key to building complex user interfaces.
 
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
 * What is the `displayName` of the component class?
 * What type of object does the `render` function return?
 
-### Nested React component classes
+#### Nested React component classes
 
 Additionally, component classes can be nested within other JSX tags. This is the second key to building complex user interfaces.
 
@@ -133,28 +129,24 @@ var Trucks = React.createClass({
 var element = <Trucks />;
 ```
 
-#### Exercise
-
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
 * What is the `displayName` of each component class?
 * **True or False:** Self-closing JSX tags must end with `/>`.
 
-### Single-line attribute expressions
+#### Single-line attribute expressions
 
-In JSX, the result of a JavaScript expression can used as an attribute value. This is useful when you want to inline the full power of JavaScript  within a JSX tag. JavaScript expressions are wrapped in a pair of curly braces `{}` instead of quotes `""`.
+In JSX, the result of a JavaScript expression can be used as an attribute value. This is useful when you want to inline the full power of JavaScript  within a JSX tag. JavaScript expressions are wrapped in a pair of curly braces `{}` instead of quotes `""`.
 
 ```jsx
 var source = 'http://i.imgur.com/nVPXKtz.jpg';
 var element = <img src={source} alt="Saffron Spice" />;
 ```
 
-#### Exercise
-
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
 
-### Multi-line attribute expressions
+#### Multi-line attribute expressions
 
 It's common for attributes of a JSX tag to stretch beyond your preferred line length. In cases like this, you can switch to defining one attribute per line. We recommend ordering attributes alphabetically and closing the JSX tag on a separate line, just like curly braces `{}` and parenthesis `()` in JavaScript.
 
@@ -179,12 +171,10 @@ var element = (
 );
 ```
 
-#### Exercise
-
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
 
-### Child expressions
+#### Child expressions
 
 In addition to attributes, JavaScript expressions can also be used as children in JSX tags. These expressions use the exact same curly brace `{}` notation.
 
@@ -193,12 +183,10 @@ var food = 'Cheese';
 var element = <p>{food} Wizards</p>;
 ```
 
-#### Exercise
-
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
 
-### Boolean attributes
+#### Boolean attributes
 
 Boolean attributes come up when using HTML form elements with attributes like `disabled`, `required`, `checked` and `readOnly`.
 
@@ -208,13 +196,11 @@ var element2 = <input type="button" disabled={true} />;
 var element3 = <input type="button" disabled={false} />;
 ```
 
-#### Exercise
-
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
 * Which two JSX tags are equivalent?
 
-### Ternary attribute expressions
+#### Ternary attribute expressions
 
 The only conditional statements that work inside of JSX are ternary expressions. `if` statements don't work because JSX is just syntactic sugar for JavaScript function calls.
 
@@ -223,13 +209,11 @@ var isHealthy = false;
 var element = <div className={isHealthy ? 'hide' : 'show'} />;
 ```
 
-#### Exercise
-
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
 * **True or False:** Any element can be a self-closing JSX tag if it has no children.
 
-### Ternary child expressions
+#### Ternary child expressions
 
 In addition to attributes, ternary expressions can be used as children for JSX tags.
 
@@ -258,12 +242,10 @@ var element = <div>
 </div>;
 ```
 
-#### Exercise
-
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
 
-### Style attribute expressions
+#### Style attribute expressions
 
 In JSX, the `style` attribute accepts a JavaScript object with camel cased CSS properties.
 
@@ -271,12 +253,10 @@ In JSX, the `style` attribute accepts a JavaScript object with camel cased CSS p
 var element = <p style={{ backgroundColor: 'lightgreen', color: 'blue' }}>Happy Grillmore</p>;
 ```
 
-#### Exercise
-
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
 
-### Comments
+#### Comments
 
 In JSX, it's possible to comment out both attributes and children. But remember, commented out code is the same as dead code. Just delete it!
 
@@ -290,8 +270,6 @@ var element = <div>
   />
 </div>;
 ```
-
-#### Exercise
 
 * How many `ReactElement` objects are created?
 * What are their `type`, `props`, and `children`?
