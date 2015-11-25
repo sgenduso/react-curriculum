@@ -20,3 +20,4 @@ The goal of each chapter is to demonstrate practical concepts you'll likely use 
 3. Complete every assignment.
 
 All of the code samples and assignments can be found in the [examples](examples/) directory.
+# react-curriculum
