@@ -2,48 +2,27 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <title></title>
   </head>
   <body>
-    <div id="hello"></div>
+    <div id='hello'></div>
 
-    <script src="https://fb.me/react-0.14.2.js"></script>
-    <script src="https://fb.me/react-dom-0.14.2.js"></script>
+    <script src='https://fb.me/react-0.14.2.js'></script>
+    <script src='https://fb.me/react-dom-0.14.2.js'></script>
 
     <script>
       var Hello = React.createClass({
-        getInitialState: function() {
-          return { who: 'world' };
-        },
-
-        handleChange: function(event) {
-          var nextState = { who: event.target.value };
-          this.setState(nextState);
-        },
-
         render: function() {
-          var message;
-
-          if (this.state.who.trim() === '') {
-            message = 'Hello?';
-          } else {
-            message = 'Hello ' + this.state.who;
-          }
-
-          return React.createElement('div', null,
-            React.createElement('h1', null, message),
-            React.createElement('input', {
-              onChange: this.handleChange,
-              type: 'text',
-              value: this.state.who
-            })
-          );
+          return React.createElement('h1', null, 'Hello World');
         }
       });
 
       ReactDOM.render(
         React.createElement(Hello),
         document.getElementById('hello')
-      );
+      )
+
     </script>
+
   </body>
 </html>
