@@ -12,8 +12,24 @@
 
     <script>
       var Hello = React.createClass({
+        getInitialState: function () {
+          return {who: 'World'};
+        },
+
+        handleChange: function (event) {
+          var nextState = {who: event.target.value};
+          this.setState(nextState);
+        }
+
         render: function() {
-          return React.createElement('h1', null, 'Hello World');
+          return React.createElement('div', null,
+            React.createElement('h1', null, 'Hello ' + this.state.who),
+            React.createElement('input', {
+              onChange: this.handleChange,
+              type: 'text',
+              value: this.state.who
+            })
+          );
         }
       });
 
