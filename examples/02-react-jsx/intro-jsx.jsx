@@ -68,3 +68,16 @@ else {
 var element = <div>
   {message}
 </div>;
+
+//Style attribute expressions
+var element = <p style={{ backgroundColor: 'darkBlue', color: 'lightgreen' }}>Happy Grillmore</p>;
+
+//Comments
+var element= <div>
+  <p>It's Bao Time</p>
+    {/* <p>Chopstix</p> */}
+    <input
+      // type='text'
+      value-'ThaiUUp' //value='Skillet'
+    />
+  </div>;
